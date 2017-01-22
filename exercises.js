@@ -5,7 +5,7 @@ var today = new Date();
 
 if(today === "Friday"){
   console.log("Let's Party!");
-};
+}
 
 /*
 If/else statements = Evaluates (or checks) a condition. If the condition is true, the first code block is executed. If the condition is false, the second code block is executed instead.
@@ -15,11 +15,11 @@ if(today === "Friday"){
   console.log("Let's Party!");
 }else{
   console.log("Get back to coding!");
-};
+}
 
 
-/*
- * #1
+
+ /** #1
  * Function - canVote
  * Create a function named `canVote` which will take a parameter: `age`.
  *
@@ -29,6 +29,14 @@ if(today === "Friday"){
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
 
+function canVote(age){
+
+if (age >= 18){
+    return true;
+  }
+ }
+  
+console.log(canVote(19));
 
 /*
  * #2
@@ -41,7 +49,14 @@ if(today === "Friday"){
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
-
+function login(password){
+if (password === "test1234" ){
+ return "Login Success!";
+ }else{
+  return "Login Denied.";
+ }
+}
+console.log(login("test1234"));
 
 /*
  * #3
@@ -55,8 +70,12 @@ if(today === "Friday"){
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+function isGreaterThan(first,second){
+if (first > second){
+  return true;
+}
+}
+console.log(isGreaterThan(3,2));
 /*
  * #4
  * Function - mustBeTrue
@@ -68,7 +87,15 @@ if(today === "Friday"){
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
+function mustBeTrue(boo){
+if (boo === true){
+  return true;
+ }else{
+  return false;
+ }
+}
 
+console.log(mustBeTrue(3>2));
 
 /*
  * #5
@@ -81,7 +108,12 @@ if(today === "Friday"){
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
+function bigBird(word){
+if (word.length === 3){
+  return "Word to Big Bird!";
+ }
+}
+console.log(bigBird("Big Black Bird!"));
 
 /*
  * #6
@@ -95,8 +127,14 @@ if(today === "Friday"){
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
-
+function isEqual(first,second){
+if (first === second){
+  return "You look mahvelous!";
+}else{
+  return "I don't know who you are anymore.";
+}
+}
+console.log(isEqual("Amanda","Amanda"));
 /*
  * #7
  * Function - notEqual
@@ -109,7 +147,14 @@ if(today === "Friday"){
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
+function notEqual(first,second){
+if (first !== second){
+  return "Opposites do attract";
+}else{
+  return "Cause it's like you're my mirror.";
+}
+}
+console.log(notEqual("Apple","Banana"));
 
 /*
  * #8
@@ -122,7 +167,14 @@ if(today === "Friday"){
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function spareChange(money){
+if (money > 100){
+  return true;
+}else{
+  return false;
+}
+}
+console.log(spareChange(120));
 
 /*
  * #9
@@ -137,6 +189,14 @@ if(today === "Friday"){
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
+function dirty30(one,two,three){
+if ((one + two + three) > 30){
+  return true;
+}else{
+  return false;
+}
+}
+console.log(dirty30(10,15,20));
 
 
 /*
@@ -150,7 +210,14 @@ if(today === "Friday"){
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function evenStevens(num){
+  if (num %2 === 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+  console.log(evenStevens(2));
 
 /*
  * #11
@@ -164,6 +231,14 @@ if(today === "Friday"){
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
+function daClub(cover,age){
+if (age>=21 && cover>=21){
+  return "Welcome to the Legends Lounge.";
+}else{
+  return "Chuck E Cheese is across the street.";
+}
+}
+console.log(daClub(22,23));
 
 
 /*
@@ -178,9 +253,15 @@ if(today === "Friday"){
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
-/*
+function graduation(credits,thesis){
+  if (credits >= 120 || thesis === true){
+    return "Congratulations on a job well done.";
+  }else{
+    return "See you in summer school.";
+  }
+}
+console.log(graduation(125,true));
+/*;
  * #13
  * Function - moneyTrain
  * Create a function named `moneyTrain` which takes a parameter: `speed`.
@@ -191,7 +272,18 @@ if(today === "Friday"){
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
+function moneyTrain(speed){
+  if (speed < 50){
+    return "You are riding Honolulu's Rail.";
+  }if(speed < 100){
+    return "You are riding an Amtrak.";
+    }else{
+      return "Now you ballin' in the Shinkansen!";
+    }
+  }
+console.log(moneyTrain(600));
+/*console.log(moneyTrain(60));
+console.log(moneyTrain(112));*/
 
 /*
  * #14
@@ -206,6 +298,19 @@ if(today === "Friday"){
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 100;
+var price = 5;
+var bought = 0;
+
+function buyDoughnut(){
+  if (budget >= price){
+    budget -= price; // budget = budget - price
+    bought++;
+  }
+}
+buyDoughnut();
+buyDoughnut();
+console.log("budget = " + budget + " bought = " + bought);
 
 
 /*
@@ -234,7 +339,11 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
+var players = ["1", "2", "3", "4","5"];
 
+for (var i = 0; i<players.length; i++){
+  console.log("Player: " + players[i]);
+}
 
 /* 
  * #16
@@ -242,6 +351,9 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+for(var i = 0; i<myFavFoods.length; i++){
+  console.log("My fav foods: " + myFavFoods[i]);
+}
 
 /*
  * #17
@@ -257,6 +369,17 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
+var numArray = [3, 5, 7, 9, 11];
+var total = 0;
+
+function sumItUp(arr){
+for(var i =0; i<arr.length; i++){
+  console.log(arr[i]);
+  total += arr[i];
+}
+return total;
+}
+console.log("sumItUp: " + sumItUp(numArray));
 
 
 /*
@@ -274,6 +397,20 @@ for (var i = 0; i<toyotaModels.length; i++){
   var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jordan"];
   var east = [];
   var west = [];
+
+function allStars(ballers){
+  for(var i = 0; i<ballers.length; i++){
+    if (i % 2 === 0){
+      console.log(ballers[i]);
+      east.push(ballers[i]);
+    }else{
+      west.push(ballers[i]);
+    }
+  }
+}
+allStars(players);
+console.log(east);
+console.log(west);
 
 /*
  * #19
@@ -302,7 +439,7 @@ Final Boss
  *  The function will loop through the string value and put all the letters into an array, except for the letter "A" and "a". We don't want no stinking "A" or "a" in our array. Test your function with the `phrase` below!
 */
 
-  var phrase = "An apple a day keeps Alice feeling awesome!"
+  var phrase = "An apple a day keeps Alice feeling awesome!";
   
 
 
